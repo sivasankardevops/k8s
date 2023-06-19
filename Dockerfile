@@ -11,7 +11,7 @@ ARG JAR_FILE=target/spring-boot-web.jar
 WORKDIR /opt/app
 
 # cp target/spring-boot-web.jar /opt/app/app.jar
-COPY ${JAR_FILE} spring-boot-web.jar
+ADD https://azure-devops-sprint-boot-output.s3.us-west-2.amazonaws.com/spring-boot-web.jar spring-boot-web.jar
 
 # java -jar /opt/app/app.jar
 ENTRYPOINT ["java","-jar","spring-boot-web.jar"]
