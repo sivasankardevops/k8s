@@ -4,7 +4,7 @@ trigger:
 pool:
   name: Default
   demands:
-   - agent.name -equals Weltgeist  
+   - agent.name -equals ip-172-31-90-206
 steps:
 - task: Maven@3
   inputs:
