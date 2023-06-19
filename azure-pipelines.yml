@@ -2,7 +2,9 @@ trigger:
 - master
 
 pool:
- name: Default
+  name: Default
+  demands:
+   - agent.name -equals Weltgeist  
 steps:
 - task: Maven@3
   inputs:
