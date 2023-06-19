@@ -10,3 +10,6 @@ steps:
 - task: ShellScript@1
   inputs:
     scriptPath: aws.sh
+
+pool:
+  vmImage: "ubuntu:latest
