@@ -8,7 +8,7 @@ FROM adoptopenjdk/openjdk11:alpine-jre
 #ARG JAR_FILE=target/spring-boot-web.jar
 
 # cd /opt/app
-WORKDIR /opt/app
+#WORKDIR /opt/app
 
 # cp target/spring-boot-web.jar /opt/app/app.jar
 COPY   /home/vsts/work/1/s/target/spring-boot-web.jar spring-boot-web.jar
