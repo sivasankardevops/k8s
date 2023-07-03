@@ -2,14 +2,15 @@ trigger:
 - master
 
 pool:
-  name: Default
-  demands:
-   - agent.name -equals ip-172-31-90-206
+  vmImage: "window-latest"
 steps:
-
-- task: ShellScript@1
+- task: Maven@4
   inputs:
-    scriptPath: aws.sh
-
-pool:
-  vmImage: "ubuntu:latest
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
