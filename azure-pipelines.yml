@@ -23,4 +23,4 @@ steps:
     repository: 'rvsivadocker/azure-devops'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: '$(Build.SourceBranchName),$(Build.SourceVersion),$(Build.BuildId)'
+    tags: '$(Build.SourceBranchName)-$(Build.SourceVersion)-$(Build.BuildId)'
