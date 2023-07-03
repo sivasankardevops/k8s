@@ -11,7 +11,7 @@ FROM adoptopenjdk/openjdk11:alpine-jre
 WORKDIR /opt/app
 
 # cp target/spring-boot-web.jar /opt/app/app.jar
-ADD https://azure-devops-sprint-boot-output.s3.us-west-2.amazonaws.com/spring-boot-web.jar spring-boot-web.jar
+COPY   /home/vsts/work/1/s/target/spring-boot-web.jar spring-boot-web.jar
 
 # java -jar /opt/app/app.jar
 ENTRYPOINT ["java","-jar","spring-boot-web.jar"]
