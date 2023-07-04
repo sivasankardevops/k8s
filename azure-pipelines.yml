@@ -13,7 +13,6 @@ steps:
     versionSpec: '11'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
-
 - task: SonarQubePublish@5
   inputs:
     pollingTimeoutSec: '300'
