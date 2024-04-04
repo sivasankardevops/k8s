@@ -6,9 +6,7 @@ variables:
   GIT_BRANCH: $(Build.SourceBranchName)
 
 pool:
-  name: Default
-  demands:
-   - agent.name -equals linux  
+  name: Default 
 steps:
 - task: JavaToolInstaller@0
   inputs:
