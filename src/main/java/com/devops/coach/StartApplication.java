@@ -12,7 +12,7 @@ public class StartApplication {
 
     @GetMapping("/")
     public String index(final Model model) {
-        model.addAttribute("title", "Hello guys!! Learning new process for automation!");
+        model.addAttribute("title", "Hello guys!! Learning new process for DevOps automation!");
         model.addAttribute("msg", "Hello All..We are testing springboot deployment with Helm and Jenkins Pipeline!!!!");
         return "index";
     }
