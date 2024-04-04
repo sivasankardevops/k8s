@@ -34,6 +34,6 @@ steps:
     Dockerfile: '**/Dockerfile'
     command: 'buildAndPush'
     containerRegistry: dockerhub
-    repository: rvsivadocker/webapp:$(GIT_BRANCH)
+    repository: rvsivadocker/webapp
 
 
