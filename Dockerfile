@@ -9,7 +9,7 @@ FROM adoptopenjdk/openjdk11:alpine-jre
 
 # cd /opt/app
 #WORKDIR /opt/app
-
+EXPOSE 8080
 # cp target/spring-boot-web.jar /opt/app/app.jar
 COPY **/spring-boot-web.jar spring-boot-web.jar
 
