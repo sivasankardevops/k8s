@@ -8,7 +8,7 @@ variables:
 pool:
   name: Default
   demands:
-   - agent.name -equals agent  
+   - agent.name -equals linux  
 steps:
 - task: JavaToolInstaller@0
   inputs:
