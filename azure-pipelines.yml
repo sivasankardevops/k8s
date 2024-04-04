@@ -22,6 +22,6 @@ steps:
       short_hash=`git rev-parse --short=7 HEAD`
       sudo echo -e "[default]\naws_access_key_id = AKIAQ3EGSYUXRRFQLS52 \naws_secret_access_key = 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" > /home/ubuntu/.aws/credentials
       sudo echo -e "[default]\nregion = eu-west-1" > /home/ubuntu/.aws/config
-      aws s3 cp /home/ubuntu/myagent/_work/1/s/target/spring-boot-web.jar s3://azurepipeline-bucket/spring-boot-web-$(short_hash).jar
+      aws s3 cp /home/ubuntu/myagent/_work/1/s/target/spring-boot-web.jar s3://azurepipeline-bucket/spring-boot-web-$short_hash.jar
 
 
