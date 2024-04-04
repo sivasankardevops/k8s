@@ -11,10 +11,10 @@ FROM adoptopenjdk/openjdk11:alpine-jre
 #WORKDIR /opt/app
 
 # cp target/spring-boot-web.jar /opt/app/app.jar
-COPY **/spring-boot-web-$short_hash.jar spring-boot-web-$short_hash.jar
+COPY **/spring-boot-web.jar spring-boot-web.jar
 
 # java -jar /opt/app/app.jar
-ENTRYPOINT ["java","-jar","spring-boot-web-$short_hash.jar"]
+ENTRYPOINT ["java","-jar","spring-boot-web.jar"]
 
 ## sudo docker run -p 8080:8080 -t docker-spring-boot:1.0
 ## sudo docker run -p 80:8080 -t docker-spring-boot:1.0
