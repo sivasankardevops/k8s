@@ -22,10 +22,6 @@ steps:
     targetType: 'inline'
     script: |
       # Write your commands here
-      curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-      apt install unzip -y
-      unzip awscliv2.zip
-      sudo ./aws/install
       
       aws configure set aws_access_key_id "AKIAQ3EGSYUXRRFQLS52" --profile user2 && aws configure set aws_secret_access_key "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" --profile user2 && aws configure set region "eu-west-1" --profile user2 && aws configure set output "text" --profile user2
       /home/ubuntu/1/s/target/spring-boot-web.jar s3://azurepipeline-bucket/spring-boot-web.jar
