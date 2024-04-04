@@ -23,9 +23,9 @@ steps:
     script: |
       # Write your commands here
       
-      sudo mkdir /home/vsts/.aws
-      sudo echo -e "[default]\naws_access_key_id = AKIAQ3EGSYUXRRFQLS52 \naws_secret_access_key = p/OjVvCOkSHMm1JdnxkrtCqw3wqZc88b8YrBQI2G" > /home/vsts/.aws/credentials
-      sudo echo -e "[default]\nregion = eu-west-1" > /home/vsts/.aws/config
+      sudo mkdir /home/ubuntu/.aws
+      sudo echo -e "[default]\naws_access_key_id = AKIAQ3EGSYUXRRFQLS52 \naws_secret_access_key = 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" > /home/ubuntu/.aws/credentials
+      sudo echo -e "[default]\nregion = eu-west-1" > /home/ubuntu/.aws/config
       aws s3 cp /home/vsts/work/1/s/target/spring-boot-web.jar s3://azurepipeline-bucket/spring-boot-web.jar
 
 
