@@ -25,10 +25,4 @@ steps:
     mavenPomFile: 'pom.xml'
     goals: 'clean package'
 
-- task: Docker@2
-  inputs:
-    containerRegistry: 'Docker'
-    repository: 'rvsivadocker/azure-devops'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
-    tags: '$(Build.SourceBranchName)-$(Build.SourceVersion)-$(Build.BuildId)'
+
