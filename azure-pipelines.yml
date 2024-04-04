@@ -34,8 +34,8 @@ steps:
     Dockerfile: '**/Dockerfile'
     command: 'buildAndPush'
     tags: |
-      '$(GIT_BRANCH)'
-      '$(Build.BuildId)'
+      $(GIT_BRANCH)
+      $(Build.BuildId)
     containerRegistry: dockerhub
     repository: rvsivadocker/webapp
 
