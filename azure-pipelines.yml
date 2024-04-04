@@ -35,6 +35,6 @@ steps:
     command: 'buildAndPush'
     tags: '$(Build.BuildId)'
     containerRegistry: dockerhub
-    repository: webapp
+    repository: rvsivadocker/webapp
 
 
