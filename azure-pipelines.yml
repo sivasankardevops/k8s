@@ -24,6 +24,6 @@ steps:
       # Write your commands here
       
       aws configure set aws_access_key_id "AKIAQ3EGSYUXRRFQLS52" --profile user2 && aws configure set aws_secret_access_key "p/OjVvCOkSHMm1JdnxkrtCqw3wqZc88b8YrBQI2G" --profile user2 && aws configure set region "eu-west-1" --profile user2 && aws configure set output "text" --profile user2
-      /home/ubuntu/1/s/target/spring-boot-web.jar s3://azurepipeline-bucket/spring-boot-web.jar
+      aws s3 cp /home/vsts/work/1/s/target/spring-boot-web.jar s3://azurepipeline-bucket/spring-boot-web.jar
 
 
