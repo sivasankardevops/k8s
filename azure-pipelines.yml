@@ -7,8 +7,9 @@ variables:
   #GIT_COMMIT_SHORT: git rev-parse --short HEAD
 
 pool:
-  name: Default 
-  demands: Agent.Name -equals linux
+  vmImage: 'ubuntu-latest'
+  #name: Default 
+  #demands: Agent.Name -equals linux
 steps:
 - task: Maven@4
   inputs:
@@ -20,13 +21,14 @@ steps:
     script: |
       # Write your commands here|
       short_hash=`git rev-parse --short=7 HEAD`
-      sudo echo -e "[default]\naws_access_key_id = AKIAQ3EGSYUXRRFQLS52 \naws_secret_access_key = p/OjVvCOkSHMm1JdnxkrtCqw3wqZc88b8YrBQI2G" > /home/ubuntu/.aws/credentials
-      sudo echo -e "[default]\nregion = eu-west-1" > /home/ubuntu/.aws/config
-      aws s3 cp /home/ubuntu/myagent/_work/1/s/target/spring-boot-web.jar s3://azurepipeline-bucket/spring-boot-web-$short_hash.jar
+      #sudo echo -e "[default]\naws_access_key_id = AKIAQ3EGSYUXRRFQLS52 \naws_secret_access_key = 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" > /home/ubuntu/.aws/credentials
+      #sudo echo -e "[default]\nregion = eu-west-1" > /home/ubuntu/.aws/config
+      #aws s3 cp /home/ubuntu/myagent/_work/1/s/target/spring-boot-web.jar s3://azurepipeline-bucket/spring-boot-web-$short_hash.jar
 - task: Docker@2
   inputs:
     Dockerfile: '**/Dockerfile'
-    command: 'build'
+    command: 'buildAndPush'
     tags: '$(Build.BuildId)'
+    containerRegistry: dockerhub
 
 
